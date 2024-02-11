@@ -1,0 +1,69 @@
+\require{color}
+
+%-- Colorize text --%
+\newcommand{\colorizett}[2]{
+    \color{#1} \texttt{#2}
+}
+
+%-- Quick and easy space --%
+\newcommand{\tspace} {
+    \texttt{ }
+}
+
+%-- Reusable prompt code --%
+\newcommand{\prompt}{
+    \colorizett{grey}{[}
+    \colorizett{yellowgreen}{deltara3}
+    \colorizett{orangered}{@}
+    \colorizett{cornflowerblue}{github}
+    \tspace
+    \colorizett{goldenrod}{~}
+    \colorizett{grey}{]}
+}
+
+%-- Stylize commands --%
+\newcommand{\command}[1]{
+    \colorizett{yellowgreen}{#1}
+}
+
+\definecolor{lightgrey}{gray}{0.70}
+
+\begin{align*}
+    %-- Profile header --%
+    &\prompt
+    \tspace
+    \command{whoami} \\
+
+    %-- Echo --%
+    &\colorizett{lightgrey}{Deltara} \\ \\
+
+    %-- About header --%
+    &\prompt
+    \tspace
+    \command{cat}
+    \tspace
+    \colorizett{lightgrey}{about.txt} \\
+
+    %-- About section --%
+    &\colorizett{lightgrey}{Hobbyist software developer} \\ \\
+    &\colorizett{lightgrey}{Languages:} \\
+    &\colorizett{lightgrey}{- Python} \\
+    &\colorizett{lightgrey}{- Rust} \\
+    &\colorizett{lightgrey}{- Swift} \\ \\
+
+    %-- Projects header --%
+    &\prompt
+    \tspace
+    \command{ls}
+    \tspace
+    \colorizett{goldenrod}{-a}
+    \tspace
+    \colorizett{lightgrey}{projects} \\
+    &\colorizett{cornflowerblue}{.} \\
+    &\colorizett{cornflowerblue}{..} \\ \\
+
+    %-- Profile footer --%
+    &\prompt
+    \tspace
+    \command{logout}
+\end{align*}
